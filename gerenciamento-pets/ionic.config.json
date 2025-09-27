@@ -1,0 +1,7 @@
+{
+  "name": "gerenciamento-pets",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

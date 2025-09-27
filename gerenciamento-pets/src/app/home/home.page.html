@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      AC - Programação | Parte I
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>PETS</ion-card-title>
+      <ion-card-subtitle>Cadastro de pets</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Aqui é possível ver a lista de pets, cadastrar, editar e excluir pets.
+    </ion-card-content>
+
+    <ion-button (click)="telaPets()">VERIFICAR</ion-button>
+  </ion-card><br>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CUIDADORES</ion-card-title>
+      <ion-card-subtitle>Cadastro de cuidadores</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Aqui é possível ver a lista de cuidadores dos pets, cadastrar, editar e excluir cuidadores.
+    </ion-card-content>
+
+    <ion-button (click)="telaCarers()">VERIFICAR</ion-button>
+  </ion-card>
+</ion-content>
