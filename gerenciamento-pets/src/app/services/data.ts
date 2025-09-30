@@ -69,13 +69,13 @@ export class DataService {
     return deleteDoc(petDocRef);
   }
 
-  getCares(): Observable<Carer[]> {
+  getCarers(): Observable<Carer[]> {
     const carersCollectionRef = collection(this.firestore, 'carers');
     const q = query(carersCollectionRef, orderBy('createdAt', 'desc'))
     return collectionData(q, { idField: 'id' }) as Observable<Carer[]>;
   }
 
-  getCarers(id: string): Observable<Carer | undefined> {
+  getCarer(id: string): Observable<Carer | undefined> {
     const carerDocRef = doc(this.firestore, `carers/${id}`);
     return docData(carerDocRef, { idField: 'id' }) as Observable<Carer | undefined>;
   }

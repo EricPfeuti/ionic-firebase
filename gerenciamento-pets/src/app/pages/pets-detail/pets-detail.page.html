@@ -1,13 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pets-detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pets"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ isNewPet ? 'Adicionar Novo Pet' : 'Editar Pet' }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pets-detail</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form #form="ngForm" (ngSubmit)="savePet()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="pet.name" name="name" required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Espécie</ion-label>
+      <ion-input type="text" [(ngModel)]="pet.species" name="species" required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Raça</ion-label>
+      <ion-input type="text" [(ngModel)]="pet.race" name="race" required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Idade</ion-label>
+      <ion-input type="number" [(ngModel)]="pet.age" name="age" required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Observações</ion-label>
+      <ion-textarea rows="4" [(ngModel)]="pet.observations" name="observations"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!form.valid" class="ion-margin-top">Salvar</ion-button>
+
+  </form>
 </ion-content>

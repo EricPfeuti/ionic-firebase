@@ -24,7 +24,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/carers-detail/carers-detail.module').then( m => m.CarersDetailPageModule)
   },
   {
+    path: 'carers-detail/:id',
+    loadChildren: () => import('./pages/carers-detail/carers-detail.module').then( m => m.CarersDetailPageModule)
+  },
+  {
     path: 'pets-detail',
+    loadChildren: () => import('./pages/pets-detail/pets-detail.module').then( m => m.PetsDetailPageModule)
+  },
+  {
+    path: 'pets-detail/:id',
     loadChildren: () => import('./pages/pets-detail/pets-detail.module').then( m => m.PetsDetailPageModule)
   },
 ];
