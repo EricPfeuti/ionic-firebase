@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="login()" class="ion-margin-top">ENTRAR</ion-button>
+  <ion-button expand="full" (click)="loginGoogle()" class="ion-margin-top">ENTRAR com GOOGLE</ion-button>
+
+  <ion-router-link routerLink="/register">
+    <ion-button expand="block" fill="clear">CRIAR CONTA</ion-button>
+  </ion-router-link>
+
+</ion-content>
